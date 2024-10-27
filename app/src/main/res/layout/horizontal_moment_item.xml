@@ -18,7 +18,9 @@
            android:layout_width="match_parent"
            android:layout_height="match_parent"
            android:scaleType="center"
-           tools:src="@drawable/gradient">
+           tools:src="@drawable/gradient"
+
+           >
 
        </com.google.android.material.imageview.ShapeableImageView>
 
