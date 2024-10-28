@@ -55,7 +55,7 @@
     </RelativeLayout>
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/memory_CV_photo"
+        android:id="@+id/moment_CV_photo"
         android:layout_width="@dimen/moment_width"
         android:layout_height="@dimen/moment_height"
         android:layout_marginVertical="5dp"
@@ -70,6 +70,7 @@
         >
 
        <com.google.android.material.imageview.ShapeableImageView
+           android:id="@+id/moment_IMG_photo"
            android:layout_width="match_parent"
            android:layout_height="match_parent"
            android:scaleType="center"
@@ -85,7 +86,7 @@
 
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/memory_CV_text"
+        android:id="@+id/moment_CV_text"
         android:layout_width="@dimen/moment_width"
         android:layout_height="wrap_content"
         app:cardCornerRadius="10dp"
@@ -94,8 +95,8 @@
 
 
 
-        app:layout_constraintEnd_toEndOf="@+id/memory_CV_photo"
-        app:layout_constraintTop_toBottomOf="@+id/memory_CV_photo">
+        app:layout_constraintEnd_toEndOf="@+id/moment_CV_photo"
+        app:layout_constraintTop_toBottomOf="@+id/moment_CV_photo">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -119,13 +120,24 @@
                 tools:text="Volunteer Name" />
 
             <com.google.android.material.textview.MaterialTextView
-                android:id="@+id/moment_LBL_text"
+                android:id="@+id/moment_LBL_date"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/moment_LBL_name"
                 android:layout_alignEnd="@+id/moment_LBL_name"
                 android:layout_marginTop="5dp"
-                android:layout_marginEnd="5dp"
+                android:maxLines="1"
+                android:minLines="1"
+                android:textSize="12sp"
+                tools:text="dd/mm/yyyy" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/moment_LBL_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/moment_LBL_date"
+                android:layout_alignEnd="@+id/moment_LBL_date"
+                android:layout_marginTop="5dp"
                 android:layout_marginBottom="5dp"
                 android:maxLines="3"
                 android:minLines="1"
@@ -149,6 +161,18 @@
                 android:layout_marginTop="5dp"
                 android:scaleType="fitCenter"
                 app:srcCompat="@drawable/empty_heart" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/moment_LBL_likes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/moment_IMG_LIKE"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:maxLines="1"
+                android:minLines="1"
+                android:textSize="12sp"
+                tools:text="0000" />
 
         </RelativeLayout>
 
