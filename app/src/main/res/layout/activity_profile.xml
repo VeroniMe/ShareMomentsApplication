@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/profile"
+    tools:context=".activities.ProfileActivity">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/profile_LBL_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/height_of_menu_line"
+        android:text="@string/mentor_name_default"
+        android:textColor="@color/white"
+        android:textSize="35sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/profile_IMG_photo"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profile_LBL_name"
+        app:srcCompat="@drawable/profile_default"
+
+        />
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/profile_LBL_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:text="@string/phone_lbl_for_details"
+        android:textSize="25sp"
+        android:drawableEnd="@drawable/baseline_phone_24"
+        android:drawablePadding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/profile_IMG_photo"
+        android:textColor="@color/blue_900_dark"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/profile_TXT_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:inputType="phone"
+        android:text="@string/phone_number_default"
+        android:textColor="@color/blue_900_dark"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="@id/profile_LBL_phone"
+        app:layout_constraintEnd_toStartOf="@+id/profile_LBL_phone" />
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/add_LBL_menteesNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="20dp"
+        android:layout_weight="1"
+        android:text="@string/num_mentees_lbl_for_details"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:drawableEnd="@drawable/baseline_mentees_24"
+        android:drawablePadding="10dp"
+        android:textColor="@color/blue_900_dark"
+        app:layout_constraintTop_toBottomOf="@id/profile_LBL_phone" />
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/profile_TXT_menteesNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:inputType="number"
+        android:text="@string/num_mentees_default"
+        android:textSize="25sp"
+        android:textColor="@color/blue_900_dark"
+        app:layout_constraintBottom_toBottomOf="@id/add_LBL_menteesNum"
+        app:layout_constraintEnd_toStartOf="@+id/add_LBL_menteesNum" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/add_LBL_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="20dp"
+        android:layout_weight="1"
+        android:drawableEnd="@drawable/baseline_email_24"
+        android:drawablePadding="10dp"
+        android:textColor="@color/blue_900_dark"
+        android:text="@string/email_lbl_for_details"
+        android:textSize="25sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/add_LBL_menteesNum"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="61dp" />
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/profile_TXT_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:inputType="number"
+        android:textColor="@color/blue_900_dark"
+        android:text="@string/email_example_default"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@id/add_LBL_email"
+        app:layout_constraintEnd_toStartOf="@+id/add_LBL_email" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/custom_edit_text"
+        android:orientation="vertical"
+        android:padding="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        >
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/profile_TXT_thankyou"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:ems="10"
+            android:inputType="text"
+            android:textColor="@color/blue_800_dark"
+            android:text="@string/thank_you_txt1_profile"
+            android:textSize="25sp"
+            android:layout_gravity="center"/>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/profile_TXT_days"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:inputType="number"
+            android:textColor="@color/blue_800_dark"
+            android:text="@string/volunteer_days_example"
+            android:textSize="30sp"
+            android:layout_gravity="center" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/profile_TXT_daysTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:inputType="text"
+            android:textColor="@color/blue_800_dark"
+            android:text="@string/thank_you_txt2_profile"
+            android:textSize="25sp"
+            android:layout_gravity="center" />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

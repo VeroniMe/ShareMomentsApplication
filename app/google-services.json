@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1043780548477",
+    "firebase_url": "https://sharemoments2024-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "sharemoments2024",
+    "storage_bucket": "sharemoments2024.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1043780548477:android:b88f105c0ad9904c50be14",
+        "android_client_info": {
+          "package_name": "com.example.sharemomentsapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1043780548477-24ukqdb0ub0ne861nqucapci5hf853h1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.sharemomentsapplication",
+            "certificate_hash": "bb28728fe8f071ea62ab18df71310ecf1ab34fbd"
+          }
+        },
+        {
+          "client_id": "1043780548477-4igt681oavf91rtooc6662iku4adkq9g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCDyhKpVVbNq9TUfJ4wFiq7EzBGUKSR7_I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1043780548477-4igt681oavf91rtooc6662iku4adkq9g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+    alias(libs.plugins.google.services)
 }
 
 android {
@@ -33,9 +34,10 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
-buildFeatures {
-    viewBinding = true
-}
+    buildFeatures {
+        viewBinding = true
+        buildConfig = true
+    }
 
 }
 
@@ -52,4 +54,35 @@ dependencies {
 
     //Glide
     implementation(libs.glide)
+
+    // Import the Firebase BoM
+    implementation(platform(libs.firebase.bom))
+
+
+    // TODO: Add the dependencies for Firebase products you want to use
+    // When using the BoM, don't specify versions in Firebase dependencies
+    implementation(libs.firebase.analytics)
+
+    //Authentification
+    implementation (libs.firebase.ui.auth)
+
+
+    //RealTime Database
+    implementation(libs.firebase.database)
+
+    //Cloud storage library
+    implementation(libs.firebase.storage)
+
+    // Maps SDK for Android
+    implementation(libs.play.services.maps)
+
+    //For PinView
+    implementation(libs.pinview)
+
+    //Lottie
+    implementation (libs.lottie)
+
+
+
+
 }

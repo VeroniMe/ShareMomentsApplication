@@ -8,4 +8,6 @@ class App : Application(){
         super.onCreate()
         ImageLoader.init(this)
     }
+
+
 }

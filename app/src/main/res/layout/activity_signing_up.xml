@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".activities.SigningUpActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="36sp"
+        android:textStyle="bold" />
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/sign_in_CV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:visibility="visible"
+        app:cardCornerRadius="@dimen/card_corner_radius_sign_in"
+        app:cardElevation="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/custom_edit_text"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/sign_in"
+                android:textAlignment="center"
+                android:textColor="@color/blue_800_dark"
+                android:textSize="36sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/sign_up_phone"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="10dp"
+                android:hint="@string/phone_number_hint"
+                app:boxCornerRadiusBottomEnd="@dimen/card_corner_radius_sign_in"
+                app:boxCornerRadiusBottomStart="@dimen/card_corner_radius_sign_in"
+                app:boxCornerRadiusTopEnd="@dimen/card_corner_radius_sign_in"
+                app:boxCornerRadiusTopStart="@dimen/card_corner_radius_sign_in"
+                android:textColor="@color/black"
+                app:prefixText="+972"
+                app:endIconMode="clear_text">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/sign_up_ET_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableEnd="@drawable/baseline_person_24"
+                 >
+
+                </com.google.android.material.textfield.TextInputEditText>
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/sign_up_BTN_signup"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="30dp"
+                android:backgroundTint="@color/blue_800_dark"
+                android:text="@string/sign_in_btn_txt"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:scaleY="4" />
+
+</LinearLayout>

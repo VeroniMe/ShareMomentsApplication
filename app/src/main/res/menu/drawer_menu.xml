@@ -1,18 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
 
     <item
         android:id="@+id/nav_profile"
-        android:title="Profile" />
+        android:title="@string/menu_profile_lbl"
+        android:icon="@drawable/baseline_co_present_24"/>
     <item
-        android:id="@+id/nav_my_guests"
-        android:title="My Guests" />
+        android:id="@+id/nav_my_mentees"
+        android:title="@string/menu_my_mentees_lbl"
+        android:icon="@drawable/baseline_groups_24"/>
     <item
         android:id="@+id/nav_add_moment"
-        android:title="Add Moment" />
+        android:title="@string/menu_add_moment_lbl"
+        android:icon="@drawable/baseline_add_reaction_24"/>
     <item
-        android:id="@+id/nav_add_guest"
-        android:title="Add Guest" />
+        android:id="@+id/nav_add_mentee"
+        android:title="@string/menu_new_mentee_lbl"
+        android:icon="@drawable/baseline_group_add_24"/>
+    <item
+        android:id="@+id/nav_log_out"
+        android:title="@string/menu_log_out_lbl"
+        android:icon="@drawable/baseline_logout_24"/>
 
 </menu>

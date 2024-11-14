@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="true"
+    android:background="@drawable/empty_two">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".activities.AddMenteeActivity">
+
+        <RelativeLayout
+            android:id="@+id/menu_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_of_menu_line"
+            android:background="@color/blue_800_dark"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/moment_LBL_menu_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/title_default_size"
+                android:textStyle="bold"
+                android:text="@string/add_mentee_title_txt" />
+        </RelativeLayout>
+
+
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/add_report_LBL_mentor_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="20dp"
+            android:textSize="20dp"
+            android:text="@string/mentee_name_lbl_for_details"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/menu_layout"
+            android:background="@color/white"
+            />
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/add_report_LBL_mentee_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="20dp"
+            android:textSize="20dp"
+            android:text="@string/mentor_name_lbl_for_details"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/add_report_LBL_mentor_name"
+            android:background="@color/white" />
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/add_report_LBL_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="20dp"
+            android:textSize="20dp"
+            android:text="@string/report_date_lbl_for_details"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/add_report_LBL_mentee_name"
+            android:background="@color/white" />
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/add_report_LBL_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="20dp"
+            android:textSize="20dp"
+            android:text="@string/report_details_lbl_for_details"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/add_report_LBL_date"
+            android:background="@color/white" />
+
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/add_report_ET_mentee_name"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:focusable="false"
+            app:layout_constraintBottom_toBottomOf="@id/add_report_LBL_mentor_name"
+            app:boxStrokeColor="@color/blue_800_dark"
+            android:background="@color/white"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/add_report_ET_mentee_nameTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/add_report_ET_mentor_name"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            app:layout_constraintBottom_toBottomOf="@id/add_report_LBL_mentee_name"
+            app:layout_constraintStart_toStartOf="parent"
+            android:focusable="false"
+            android:background="@color/white"
+            app:boxStrokeColor="@color/blue_800_dark">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/add_report_ET_mentor_nameTxt"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint=""
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <EditText
+            android:id="@+id/add_report_ET_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="date"
+            android:focusable="false"
+            tools:layout_editor_absoluteX="70dp"
+            tools:layout_editor_absoluteY="289dp"
+            android:layout_marginStart="15dp"
+            app:layout_constraintBottom_toBottomOf="@id/add_report_LBL_date"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/add_report_ET_details"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            app:layout_constraintBottom_toBottomOf="@id/add_report_LBL_details"
+            app:boxStrokeColor="@color/blue_800_dark"
+            android:background="@color/white"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/add_report_ET_detailsTxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/add_free_text_hint_txt" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/add_mentee_BTN_send"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="@string/save_btn_txt"
+            android:textSize="20dp"
+            android:layout_marginStart="5dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/add_report_LBL_details"
+            >
+
+
+        </com.google.android.material.button.MaterialButton>
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

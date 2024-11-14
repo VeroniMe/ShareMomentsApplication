@@ -1,44 +1,42 @@
 package models
 
-import java.time.LocalDate
+
 
 
 data class Moment private constructor(
-    val momentPhoto: String,
-    //val genre: List<String>,
-    //val actors: List<String>,
+    val momentName: String,
+    val momentPhotoUrl: String,
     val volunteerName: String,
-    //val length: Int,
     val description: String,
-    val creationDate: LocalDate,
-    //val rating: Float,
+    val creationDate: String,
     var likesCount: Int,
     var isCollapsed: Boolean = true
+
 ) {
+
     fun toggleCollapse() = apply { this.isCollapsed = !isCollapsed }
 
+    constructor() : this("","", "", "", "", 0, true)
+
     class Builder(
-        var momentPhoto: String = "",
-        //var genre: List<String> = emptyList(),
-        //var actors: List<String> = emptyList(),
+        var momentName: String = "",
+        var momentPhotoUrl: String = "",
         var volunteerName: String  = "",
-        var likesCount: Int =0,
         var description: String = "",
-        var creationDate: LocalDate = LocalDate.now(),
-        //var rating: Float = 0.0F,
-        //var isFavorite: Boolean = false
+        var creationDate: String = "",
+        var likesCount: Int = 0
+
     ) {
-        fun momentPhoto(poster: String) = apply { this.momentPhoto = momentPhoto }
-        //fun genre(genre: List<String>) = apply { this.genre = genre }
-        //fun actors(actors: List<String>) = apply { this.actors = actors }
-        fun volunteerName(name: String) = apply { this.volunteerName = volunteerName }
-        fun likesCount(length: Int) = apply { this.likesCount = likesCount }
-        fun description(overview: String) = apply { this.description = description }
-        fun creationDate(releaseDate: LocalDate) = apply { this.creationDate = creationDate }
-        //fun rating(rating: Float) = apply { this.rating = rating }
-        //fun isFavorite(isFavorite: Boolean) = apply { this.isFavorite = isFavorite }
+        fun momentName(momentName: String) = apply { this.momentName = momentName }
+        fun momentPhotoUrl(momentPhotoUrl: String) = apply { this.momentPhotoUrl = momentPhotoUrl }
+        fun volunteerName(volunteerName: String) = apply { this.volunteerName = volunteerName }
+        fun description(description: String) = apply { this.description = description }
+        fun creationDate(creationDate: String) = apply { this.creationDate = creationDate }
+        fun likesCount(likesCount: Int) = apply { this.likesCount = likesCount }
+
         fun build() = Moment(
-            momentPhoto,
+            momentName,
+            momentPhotoUrl,
             volunteerName,
             description,
             creationDate,
@@ -46,6 +44,31 @@ data class Moment private constructor(
 
 
         )
+    }
+
+    companion object {
+        private var counter = 1
+
+        fun incrementCounter() {
+            counter++
+        }
+
+        fun getMomentId(): String {
+
+
+            return buildString {
+                append("moment")
+                append(counter.toString())
+            }
+        }
+
+        fun getCounter(): Int {
+            return counter
+        }
+
+        fun setCounter(count:Int) {
+            counter = count
+        }
     }
 
 }

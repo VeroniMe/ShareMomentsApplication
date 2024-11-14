@@ -1,16 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/feed"
+    android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".FeedActivity">
-
+    android:background="@drawable/feed">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/feed_RV_list"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:listitem="@layout/horizontal_moment_item"/>
-</RelativeLayout>
+        tools:listitem="@layout/horizontal_moment_item" />
+
+    <RelativeLayout
+        android:id="@+id/feed"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activities.FeedActivity">
+
+
+        <RelativeLayout
+            android:id="@+id/menu_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_of_menu_line"
+            android:background="@color/blue_800_dark"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageButton
+                android:id="@+id/feed_BTN_menu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:backgroundTint="@android:color/transparent"
+                android:src="@drawable/menu_button">
+
+            </ImageButton>
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/feed_LBL_menu_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="15dp"
+                android:layout_toStartOf="@+id/feed_BTN_menu"
+                android:text="@string/our_moments_title_txt"
+                android:textColor="@color/white"
+                android:textSize="@dimen/title_default_size"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/navigation_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="end"
+        android:background="@color/white"
+        android:fitsSystemWindows="true"
+        app:headerLayout="@layout/nav_header"
+        app:menu="@menu/drawer_menu" />
+
+</androidx.drawerlayout.widget.DrawerLayout>

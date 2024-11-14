@@ -1,0 +1,80 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/login"
+    tools:context=".activities.VerificationActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/app_name"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="36sp"
+        android:textStyle="bold" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        app:cardCornerRadius="30dp"
+        app:cardElevation="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center_horizontal"
+            android:padding="24dp"
+            android:background="@drawable/custom_edit_text">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/verific_title_txt"
+                android:textSize="36sp"
+                android:textAlignment="viewEnd"
+                android:textStyle="bold"
+                android:textColor="@color/blue_800_dark"/>
+
+            <TextView
+                android:id="@+id/user_verification"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/enter_otp_txt"
+                android:layout_marginTop="10dp"
+                android:textSize="20sp"
+                android:textColor="@color/blue_800_dark"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/id_otp"
+                android:background="@drawable/custom_edit_text"
+                android:layout_marginTop="15dp"
+                android:padding="8dp"
+                android:maxLength="6"
+                android:hint="@string/code_hint_txt"
+                android:drawableStart="@drawable/baseline_lock_24"
+                android:drawablePadding="8dp"
+                android:textColor="@color/black"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/verify_BTN_verify"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="@string/verify_btn_txt"
+                android:textSize="18sp"
+                android:layout_marginTop="30dp"
+                android:backgroundTint="@color/blue_800_dark"/>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

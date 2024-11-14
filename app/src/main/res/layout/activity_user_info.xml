@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/empty_new_user"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/info_LBL_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:text="@string/nice_to_meet_txt_newUser"
+        android:textSize="@dimen/title_default_size"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/nameEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/name_hint_txt" />
+
+    <EditText
+        android:id="@+id/surnameEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/surname_hint_txt" />
+
+    <EditText
+        android:id="@+id/emailEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/email_adress_hint_txt" />
+
+    <EditText
+        android:id="@+id/startEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="false"
+        android:hint="@string/volunteer_start_date_hint_txt"
+
+    />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/new_user_LBL_add_photo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginTop="15dp"
+        android:background="@color/white"
+        android:text="@string/choose_profile_photo_lbl"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/new_user_BTN_choosePhoto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/grey"
+        android:strokeColor="@color/black"
+        android:text="@string/choose_photo_btn_txt"
+        android:textColor="@color/blue_grey_500_dark"
+        app:cornerRadius="10dp"
+        app:strokeWidth="1dp">
+
+    </com.google.android.material.button.MaterialButton>
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/added_image"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_gravity="end"
+        android:layout_marginTop="15dp"
+        app:srcCompat="@drawable/load_photo_default"
+
+    />
+
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginTop="15dp"
+        android:textSize="20sp"
+        android:text="@string/save_btn_txt" />
+
+</LinearLayout>

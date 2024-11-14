@@ -1,8 +1,6 @@
 package utilities
 
 import models.Moment
-import java.time.LocalDate
-import java.time.format.DateTimeFormatter
 
 object DataManager {
 
@@ -11,15 +9,10 @@ object DataManager {
         moments.add(
                 Moment
                     .Builder()
-                    .momentPhoto("")
+                    .momentPhotoUrl("")
                     .volunteerName("Veronika Merkulova")
-                    .description("גכגכג גכג גכגכג. גכגכגכ גכגכגכ גכגכגכ. דכדכ'קגשגשדג. גשג. שכ''שכש' כ'כדכגכדגעדג דגעג")
-                    .creationDate(
-                        LocalDate.parse(
-                            "13/12/2023",
-                            DateTimeFormatter.ofPattern("dd/MM/yyyy")
-                        )
-                    )
+                    .description("המשימות תואמות את תוכנית הלימודים ומזמנות התייחסות לכישורי שפה והבנה בקריאה, בכתיבה ובידע לשוני . כל כלי מתמקד בהיבטים מסוימים של כישורי השפה וכולל הנחיות למורה לתיווך לתלמיד ולהמשך תכנון ההוראה.")
+                    .creationDate("13/12/2023")
                     .likesCount(10)
                     .build()
 
@@ -27,15 +20,10 @@ object DataManager {
         moments.add(
             Moment
                 .Builder()
-                .momentPhoto("")
+                .momentPhotoUrl("")
                 .volunteerName("Caterine Koren")
                 .description("גכגכג גכג גכגכג. גכגכגכ גכגכגכ גכגכגכ. דכדכ'קגשגשדג. גשג. שכ''שכש' כ'כדכגכדגעדג דגעג")
-                .creationDate(
-                    LocalDate.parse(
-                        "14/10/2023",
-                        DateTimeFormatter.ofPattern("dd/MM/yyyy")
-                    )
-                )
+                .creationDate("13/12/2023")
                 .likesCount(11)
                 .build()
 
@@ -43,15 +31,16 @@ object DataManager {
         moments.add(
             Moment
                 .Builder()
-                .momentPhoto("")
+                .momentPhotoUrl("")
                 .volunteerName("Michael Levi")
                 .description("גכגכג גכג גכגכג. גכגכגכ גכגכגכ גכגכגכ. דכדכ'קגשגשדג. גשג. שכ''שכש' כ'כדכגכדגעדג דגעג")
-                .creationDate(
+                /*.creationDate(
                     LocalDate.parse(
                         "13/12/2023",
                         DateTimeFormatter.ofPattern("dd/MM/yyyy")
                     )
-                )
+                )*/
+                .creationDate("13/12/2023")
                 .likesCount(10)
                 .build()
 

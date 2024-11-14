@@ -1,28 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="200dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:padding="16dp"
-    android:background="@android:color/holo_blue_light">
+    android:background="@drawable/header_bck">
 
-    <ImageView
+    <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/profile_image"
-        android:layout_width="64dp"
-        android:layout_height="64dp"
-        android:src="@drawable/gradient"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        app:srcCompat="@drawable/profile_default">
 
-        >
-
-    </ImageView> <!-- Replace with your actual image resource -->
+    </com.google.android.material.imageview.ShapeableImageView> <!-- Replace with your actual image resource -->
 
     <TextView
         android:id="@+id/user_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="User Name"
-        android:textSize="18sp"
-        android:textStyle="bold">
+        android:layout_marginTop="20dp"
+        android:text="@string/mentor_name_default"
+        android:textSize="35sp"
+        android:textStyle="bold"
+        android:layout_gravity="center">
+
     </TextView>
 
 </LinearLayout>

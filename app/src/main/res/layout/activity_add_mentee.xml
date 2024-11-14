@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fillViewport="true"
+    android:background="@drawable/empty_two">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".activities.AddMenteeActivity">
+
+        <RelativeLayout
+            android:id="@+id/menu_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/height_of_menu_line"
+            android:background="@color/blue_800_dark"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/moment_LBL_menu_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/title_default_size"
+                android:textStyle="bold"
+                android:text="@string/add_new_mentee_title_txt" />
+        </RelativeLayout>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/add_LBL_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="20dp"
+            android:textSize="20sp"
+            android:text="@string/phone_lbl_for_details"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/menu_layout"
+            android:background="@color/white" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/add_LBL_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="20dp"
+            android:textSize="20sp"
+            android:text="@string/name_lbl_for_details"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/add_LBL_phone"
+            android:background="@color/white"
+            />
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/add_LBL_surname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="20dp"
+            android:textSize="20sp"
+            android:text="@string/surname_lbl_for_details"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/add_LBL_name"
+            android:background="@color/white" />
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/add_LBL_startService"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="20dp"
+            android:textSize="20sp"
+            android:text="@string/serviceStart_lbl_for_details"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/add_LBL_surname"
+            android:background="@color/white" />
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/add_LBL_endService"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="20dp"
+            android:textSize="20sp"
+            android:text="@string/serviceEnd_lbl_for_details"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/add_LBL_startService"
+            android:background="@color/white" />
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/add_LBL_birthday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="20dp"
+            android:textSize="20sp"
+            android:text="@string/birthDay_lbl_for_details"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/add_LBL_endService"
+            android:background="@color/white"/>
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/add_LBL_city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="20dp"
+            android:textSize="20sp"
+            android:text="@string/city_lbl_for_details"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/add_LBL_birthday"
+            android:background="@color/white" />
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/add_LBL_homeland"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="20dp"
+            android:textSize="20sp"
+            android:text="@string/homeland_lbl_for_details"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/add_LBL_city"
+            android:background="@color/white" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/add_mentee_LBL_add_photo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:background="@color/white"
+            android:text="@string/load_img_txt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/add_LBL_homeland"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/add_mentee_BTN_choosePhoto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:strokeColor="@color/black"
+            app:strokeWidth="1dp"
+            android:layout_marginEnd="15dp"
+            android:layout_gravity="end"
+            android:backgroundTint="@color/grey"
+            android:text="@string/choose_photo_btn_txt"
+            app:cornerRadius="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/add_mentee_LBL_add_photo">
+        </com.google.android.material.button.MaterialButton>
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/added_image"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="15dp"
+            android:layout_gravity="end"
+            android:layout_marginEnd="15dp"
+            app:srcCompat="@drawable/load_photo_default"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/add_mentee_BTN_choosePhoto"
+            />
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/add_mentee_TI_phone"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+
+            android:layout_marginStart="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/add_LBL_phone"
+
+            android:layout_marginTop="10dp"
+            android:hint="@string/phone_number_hint"
+            android:textColor="@color/black"
+            app:prefixText="+972"
+            app:endIconMode="clear_text">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/add_mentee_ET_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="phone"
+                >
+
+            </com.google.android.material.textfield.TextInputEditText>
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/add_ET_name"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            app:layout_constraintBottom_toBottomOf="@id/add_LBL_name"
+            app:boxStrokeColor="@color/blue_800_dark"
+            android:background="@color/white"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/add_mentee_ET_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/name_hint_txt"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="296dp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/add_ET_surnname"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            app:layout_constraintBottom_toBottomOf="@id/add_LBL_surname"
+            app:layout_constraintStart_toStartOf="parent"
+            android:background="@color/white"
+            app:boxStrokeColor="@color/blue_800_dark">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/add_mentee_ET_surname"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="@string/surname_hint_txt"
+                />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <EditText
+            android:id="@+id/add_mentee_ET_serviceStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="date"
+            android:focusable="false"
+            tools:layout_editor_absoluteX="70dp"
+            tools:layout_editor_absoluteY="289dp"
+            android:layout_marginStart="15dp"
+            app:layout_constraintBottom_toBottomOf="@id/add_LBL_startService"
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <EditText
+            android:id="@+id/add_mentee_ET_serviceEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:focusable="false"
+            android:inputType="date"
+            tools:layout_editor_absoluteX="70dp"
+            tools:layout_editor_absoluteY="289dp"
+            android:layout_marginStart="15dp"
+            app:layout_constraintBottom_toBottomOf="@id/add_LBL_endService"
+
+            app:layout_constraintStart_toStartOf="parent"/>
+
+        <EditText
+            android:id="@+id/add_mentee_ET_birthday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="date"
+            android:focusable="false"
+            tools:layout_editor_absoluteX="70dp"
+            tools:layout_editor_absoluteY="289dp"
+            android:layout_marginStart="15dp"
+            app:layout_constraintBottom_toBottomOf="@id/add_LBL_birthday"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/add_ET_city"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            app:layout_constraintBottom_toBottomOf="@id/add_LBL_city"
+            app:boxStrokeColor="@color/blue_800_dark"
+            android:background="@color/white"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/add_mentee_ET_city"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/city_hint_txt"
+                 />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/add_ET_homeland"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            app:layout_constraintBottom_toBottomOf="@id/add_LBL_homeland"
+            app:boxStrokeColor="@color/blue_800_dark"
+            android:background="@color/white"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/add_mentee_ET_homeland"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/homeland_hint_txt" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/add_mentee_BTN_send"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/save_btn_txt"
+            android:textSize="20sp"
+            android:layout_marginStart="5dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/added_image"
+            >
+
+
+        </com.google.android.material.button.MaterialButton>
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

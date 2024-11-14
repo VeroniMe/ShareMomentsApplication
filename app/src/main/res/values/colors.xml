@@ -1,9 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="black">#FF000000</color>
+    <color name="blue_grey_500_dark">#34515E</color>
+    <color name="grey">#B0BEC5</color>
     <color name="white">#FFFFFFFF</color>
     <color name="blue_300">#64B5F6</color>
     <color name="deep_purple_300">#9575CD</color>
+    <color name="deep_purple_800">#4527A0</color>
+    <color name="purple_300">#BA68C8</color>
     <color name="teal_200">#80CBC4</color>
-    <color name="green_900">#33691E</color>
+    <color name="green_900">#33691E</color> <!-- match -->
+    <color name="blue_800">#1565C0</color>
+    <color name="blue_custom">#2483d8</color>
+    <color name="green_custom">#6a8842</color>
+    <color name="blue_900_dark">#002171</color>
+    <color name="blue_800_dark">#003C8F</color> <!-- match -->
+    <color name="blue_700_dark">#004BA0</color>
 </resources>
